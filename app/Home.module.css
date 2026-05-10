@@ -51,7 +51,8 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  margin-top: -80px; /* Overlap the hero image */
+  margin-top: -80px;
+  /* Overlap the hero image */
   width: 100%;
   padding: 30px 3%;
   position: relative;
@@ -119,7 +120,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  overflow: hidden; /* Clips the cards at the slider edges */
+  overflow: hidden;
+  /* Clips the cards at the slider edges */
 }
 
 .contentPics {
@@ -134,7 +136,8 @@
   scrollbar-width: none;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  touch-action: pan-x; /* Ensures touch scrolling works perfectly */
+  touch-action: pan-x;
+  /* Ensures touch scrolling works perfectly */
 }
 
 .contentPics::-webkit-scrollbar {
@@ -167,7 +170,7 @@
   right: 0;
   left: 0;
   height: 60px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -179,11 +182,11 @@
   font-size: 1.1rem;
   color: white;
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .aboutUsSection {
-  scroll-margin-top: 300px;
+  scroll-margin-top: 175px;
   padding: 80px 24px;
   max-width: 1000px;
   margin: 0 auto;
@@ -265,9 +268,11 @@
   .navArrow {
     display: none;
   }
+
   .homeContent {
     margin-top: 0;
   }
+
   .headlineImg {
     display: none;
   }
@@ -277,9 +282,11 @@
   .headlineImg {
     height: 400px;
   }
+
   .homeImgCon {
     width: clamp(200px, 60vw, 300px);
   }
+
   .contentPics {
     gap: 4vw;
   }
@@ -289,9 +296,11 @@
   .headlineImg {
     height: 300px;
   }
+
   .homeImgCon {
     width: clamp(180px, 75vw, 250px);
   }
+
   .contentPics {
     border-left-width: 10px;
     border-right-width: 10px;
