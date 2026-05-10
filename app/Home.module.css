@@ -119,6 +119,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  overflow: hidden; /* Clips the cards at the slider edges */
 }
 
 .contentPics {
@@ -133,6 +134,7 @@
   scrollbar-width: none;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  touch-action: pan-x; /* Ensures touch scrolling works perfectly */
 }
 
 .contentPics::-webkit-scrollbar {
