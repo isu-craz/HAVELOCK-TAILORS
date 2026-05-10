@@ -1,0 +1,100 @@
+.main {
+  padding-top: 120px;
+  min-height: calc(100vh - 136px);
+}
+
+.galleryTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20%;
+  left: 0;
+  background-color: rgba(255, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: clamp(12px, 1.3vw, 16px);
+  z-index: 1200;
+  transition: transform 0.3s ease;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  backdrop-filter: blur(8px);
+  padding: clamp(3px, 0.9vw, 6px) clamp(10px, 4vh, 40px);
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.whatsappContainer {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  bottom: -5px;
+  right: 20px;
+  z-index: 1500;
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background-color: rgba(37, 211, 101, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid black;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  color: black;
+  text-decoration: none;
+}
+
+.whatsappBtn svg {
+  margin-right: 5px;
+  position: relative;
+  bottom: -3px;
+}
+
+.whatsappBtn:hover {
+  background-color: rgb(37, 211, 102);
+  border-color: rgb(37, 211, 102);
+  color: white;
+}
+
+@media (max-width: 1023px) {
+  .main {
+    padding-top: 64px;
+    min-height: calc(100vh - 64px);
+  }
+}
+
+@media (max-width: 767px) {
+  .whatsappContainer {
+    bottom: 0px;
+    right: 10px;
+  }
+  .whatsappBtn {
+    border-width: 2px;
+    border-radius: 50px;
+    font-size: clamp(12px, 2.5vw, 16px);
+    padding: clamp(5px, 2vw, 11px) 15px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 559px) {
+  .whatsappContainer {
+    right: 5px;
+    bottom: 5px;
+  }
+  .whatsappBtn svg {
+    bottom: -2px;
+    height: 18px;
+    width: 18px;
+  }
+}

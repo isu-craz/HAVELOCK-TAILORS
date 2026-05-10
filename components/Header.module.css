@@ -1,0 +1,136 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.377);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.navBar {
+  padding: 0 3%;
+  background-color: rgb(255, 255, 255);
+}
+
+.nav {
+  width: 100%;
+  padding: 8px 0;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftSection,
+.rightSection {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightSection {
+  width: 37vw;
+  min-width: 450px;
+}
+
+.leftSection div,
+.rightSection div {
+  display: flex;
+  flex: 1;
+}
+
+.leftSection div {
+  justify-content: left;
+}
+
+.rightSection div {
+  justify-content: right;
+}
+
+.nav a {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.panelSection {
+  padding: 0 3%;
+}
+
+.panel {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSide,
+.rightSide {
+  flex: 0.3;
+}
+
+.leftSide {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.brandName {
+  font-size: clamp(35px, 2.5vw, 50px);
+  font-weight: var(--brand-weight);
+  font-family: var(--font-primary);
+  text-align: center;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.brandName a {
+  color: black;
+}
+
+.brandName span {
+  font-size: clamp(10px, 0.7vw, 20px);
+  position: absolute;
+  top: clamp(0px, 0.3vw, 4px);
+  right: -15px;
+}
+
+.menuIcon {
+  display: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menuIcon:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+@media (max-width: 1023px) {
+  .navBar {
+    display: none;
+  }
+
+  .menuIcon {
+    display: flex;
+  }
+
+  .panel {
+    height: 64px;
+  }
+
+  .brandName {
+    font-size: clamp(24px, 4vw, 30px);
+  }
+}

@@ -1,0 +1,167 @@
+.gallerySection {
+  scroll-margin-top: 100px;
+  padding: 80px 24px;
+  background-color: var(--bg-primary);
+  text-align: center;
+}
+
+.headline {
+  margin-bottom: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: none;
+  font-family: var(--font-primary);
+}
+
+.fgTitle {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-family: var(--font-primary);
+}
+
+.headline p {
+  position: relative;
+  z-index: 2;
+  color: #777;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.galleryContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+
+/* Gradients for fading edges */
+.galleryContainer::before,
+.galleryContainer::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.galleryContainer::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--bg-primary) 0%, transparent 100%);
+}
+
+.galleryContainer::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--bg-primary) 0%, transparent 100%);
+}
+
+.scrollArea {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollArea::-webkit-scrollbar {
+  display: none;
+  /* Safari/Chrome */
+}
+
+.masonryGrid {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  z-index: 2;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.controls {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 20;
+}
+
+.controlBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.controlBtn:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-secondary);
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .masonryGrid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .masonryGrid {
+    column-count: 1;
+  }
+
+  .controls {
+    display: none;
+  }
+}

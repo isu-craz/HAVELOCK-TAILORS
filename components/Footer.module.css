@@ -1,0 +1,79 @@
+.footer {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  padding: 64px 24px 32px;
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.brandSection h3 {
+  font-family: var(--font-primary);
+  font-weight: var(--brand-weight);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+  color: var(--bg-secondary);
+}
+
+.brandSection span {
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  vertical-align: super;
+}
+
+.brandSection p {
+  color: #A0A0A0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.linksSection h4, .contactSection h4 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--bg-secondary);
+  font-family: var(--font-heading);
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linksList a {
+  color: #A0A0A0;
+  transition: color 0.3s ease;
+}
+
+.linksList a:hover {
+  color: var(--accent-color);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #A0A0A0;
+}
+
+.bottomBar {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #707070;
+  font-size: 0.9rem;
+}
