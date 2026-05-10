@@ -87,6 +87,11 @@
   justify-content: flex-start;
 }
 
+.rightSide {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .brandName {
   font-size: clamp(35px, 2.5vw, 50px);
   font-weight: var(--brand-weight);

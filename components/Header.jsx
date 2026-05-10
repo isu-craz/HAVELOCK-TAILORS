@@ -43,7 +43,15 @@ export default function Header({ onMenuClick }) {
       {/* Main Panel */}
       <div className={styles.panelSection}>
         <div className={styles.panel}>
-          <div className={styles.leftSide}>
+          <div className={styles.leftSide}></div>
+          
+          <div className={styles.brandName}>
+            <Link href="/">
+              HAVELOCK TAILORS<span>&reg;</span>
+            </Link>
+          </div>
+          
+          <div className={styles.rightSide}>
             <div 
               className={styles.menuIcon} 
               onClick={(e) => {
@@ -54,14 +62,6 @@ export default function Header({ onMenuClick }) {
               <Menu size={24} />
             </div>
           </div>
-          
-          <div className={styles.brandName}>
-            <Link href="/">
-              HAVELOCK TAILORS<span>&reg;</span>
-            </Link>
-          </div>
-          
-          <div className={styles.rightSide}></div>
         </div>
       </div>
 

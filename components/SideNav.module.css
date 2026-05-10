@@ -19,22 +19,22 @@
 .sideNav {
   position: fixed;
   top: 0;
-  left: -350px;
+  right: -350px;
   width: 300px;
   max-width: 80vw;
   height: 100vh;
   background-color: white;
   z-index: 2001;
-  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   font-family: Arial, sans-serif;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
 }
 
 .sideNav.sideNavOpen {
-  left: 0;
+  right: 0;
 }
 
 .navHeader {
