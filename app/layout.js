@@ -1,4 +1,4 @@
-import { Lato, Playfair_Display } from "next/font/google";
+import { Lato, Cabin } from "next/font/google";
 import "./globals.css";
 import MainLayout from "@/components/MainLayout";
 
@@ -9,7 +9,7 @@ const lato = Lato({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const cabin = Cabin({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-heading",
@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${lato.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${lato.variable} ${cabin.variable}`}>
       <body>
         <MainLayout>
           {children}

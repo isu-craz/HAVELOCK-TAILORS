@@ -136,8 +136,6 @@
   scrollbar-width: none;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  touch-action: pan-x;
-  /* Ensures touch scrolling works perfectly */
 }
 
 .contentPics::-webkit-scrollbar {
@@ -186,11 +184,17 @@
 }
 
 .aboutUsSection {
-  scroll-margin-top: 175px;
+  scroll-margin-top: 200px;
   padding: 80px 24px;
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .aboutUsSection {
+    scroll-margin-top: 30px; /* Mobile value */
+  }
 }
 
 .aboutUsSection h2 {
