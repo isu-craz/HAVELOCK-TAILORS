@@ -1,0 +1,205 @@
+.reviewsSection {
+  padding: 60px 0 100px;
+  background-color: var(--bg-primary);
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 24px;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.writeReviewBtn {
+  background-color: transparent;
+  color: #1a73e8; /* Google Blue */
+  border: 1px solid #1a73e8;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.writeReviewBtn:hover {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.marqueeContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+/* Gradients for fading edges */
+.marqueeContainer::before,
+.marqueeContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-primary) 0%, transparent 100%);
+}
+
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-primary) 0%, transparent 100%);
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 20px;
+  /* 
+    The animation duration dictates the speed.
+    Increase the seconds to make it slower, decrease to make it faster.
+  */
+  animation: marquee 30s linear infinite;
+  padding-left: 20px;
+}
+
+/* Pause the scrolling when the user hovers over a review to read it */
+.marqueeContainer:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+.reviewCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 350px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.reviewCard:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.cardHeader:hover {
+  opacity: 0.8;
+}
+
+.userInitial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--accent-color); /* Could also use random colors */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.userInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 2px;
+}
+
+.googleLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.reviewText {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to 4 lines */
+  -webkit-box-orient: vertical;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate exactly half of the duplicated list */
+    transform: translateX(calc(-50% - 10px)); 
+  }
+}
+
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 2rem;
+  }
+  
+  .reviewCard {
+    width: 300px;
+  }
+}

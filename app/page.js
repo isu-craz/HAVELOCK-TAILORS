@@ -3,6 +3,7 @@
 import ContentSlider from "@/components/ContentSlider";
 import styles from "./Home.module.css";
 import Gallery from "@/components/Gallery";
+import GoogleReviews from "@/components/GoogleReviews";
 import Link from "next/link";
 
 export default function Home() {
@@ -65,6 +66,8 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <GoogleReviews />
     </>
   );
 }

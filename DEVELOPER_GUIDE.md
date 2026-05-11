@@ -45,7 +45,27 @@ The gallery uses an automated masonry grid.
 
 ---
 
-## 4. Adjusting Section Scrolling
+## 4. Updating Google Reviews
+The Google Reviews section uses a manually curated list of reviews to ensure high quality and fast loading times.
+
+1. **Edit the List**: Open `components/GoogleReviews.jsx`.
+2. **Find the `REVIEWS` array** at the very top of the file:
+   ```javascript
+   const REVIEWS = [
+     {
+       id: 1,
+       name: "John Doe",
+       initial: "J",
+       text: "Your review text here.",
+       date: "2 weeks ago"
+     }
+   ];
+   ```
+3. Add, edit, or remove review objects from this array. The component will automatically duplicate them to create the infinite scrolling effect.
+
+---
+
+## 5. Adjusting Section Scrolling
 To change where the page stops when clicking "Gallery" or "About us":
 
 1. Open the CSS file for that section (e.g., `app/Home.module.css` for "About Us" or `components/Gallery.module.css` for "Gallery").
@@ -59,21 +79,21 @@ To change where the page stops when clicking "Gallery" or "About us":
 
 ---
 
-## 5. Editing Page Content
+## 6. Editing Page Content
 - **Homepage Content**: Edit `app/page.js`.
 - **Sub-pages**: Edit `app/rent/page.js`, `app/weddings/page.js`, or `app/custom-tailoring/page.js`.
 - **Side Menu Links**: Edit `components/SideNav.jsx`.
 
 ---
 
-## 6. Development Commands
+## 7. Development Commands
 - **Run Locally**: `npm run dev`
 - **Build for Production**: `npm run build`
 - **Preview Production Build**: `npm run start`
 
 ---
 
-## 7. Deployment
+## 8. Deployment
 The project is ready for **Vercel**. 
 1. Push your code to GitHub.
 2. Connect your GitHub repository to Vercel.
